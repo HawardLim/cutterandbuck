@@ -1,0 +1,19 @@
+<div class="container" style="margin-top:100px;">
+<%= form_for(@post, :html => { :multipart => true }) do |f| %>
+   <div class="field up_title martop">
+     <%= f.label :제목 %><br>
+     <%= f.text_field :title %>
+   </div>
+   <div class="photo_up">
+   <%= f.fields_for :post_attachments do |p| %>
+     <div class="field">
+       <%= p.label :사진 %><br>
+       <%= p.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]" %>
+     </div>
+   <% end %>
+   </div>
+   <div class="up_title">
+   <input type="submit" value="업로드">
+   </div>
+<% end %>
+</div>

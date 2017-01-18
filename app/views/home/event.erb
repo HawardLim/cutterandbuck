@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="cata_title">
+        <h2>EVENT</h2>
+    </div>
+<table class="table">
+         <thead>
+         <tr class="table_head_row">
+         <th class="table_head_num">번호</th>
+         <th class="table_head_title">제목</th>
+         <th class="table_head_day">등록일</th>
+         <th class="table_head_day">조회수</th>
+         </tr>
+         </thead>
+         <tbody>
+              <% @event.each do |e| %> 
+              <tr class="table_con_row">
+              <td class=""><%= e.id %></td>
+              <td><a href="/home/news_detail/<%=e.id%>"><%= e.title %></td>
+              <td class=""><%= e.created_at.in_time_zone("Asia/Shanghai").strftime("%Y-%m-%d") %></td>
+              <td><%= e.count %></td>
+              </tr>
+              <% end %>
+         </tbody>
+     </table>
+     <div class="pagination_div"><%= will_paginate @event, :previous_label => t("<<"), :next_label => t(">>")%></div>
+</div>

@@ -1,0 +1,824 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+font-family: 'gotham';
+font-style: normal;
+src: url('/assets/Gotham-Black(1).ttf');
+src: url('/assets/Gotham-Bold(1).ttf');
+}
+// 메인페이지
+body {
+    background-color:white;
+    font-family:'gotham';
+}
+.sub_menu {
+    width:100%;
+    height:50px;
+    background-color:black;
+}
+.main_div1 {
+    height:90vh;
+    width:100%;
+    position:relative;
+    z-index:1;
+     img {
+         width:100%;
+         height:90vh;
+     }
+}
+.banner_box {
+    width:95%;
+    height:180px;
+    position:relative;
+    z-index:2;
+    margin-top:-350px;
+    margin-left:5%;
+    .news_box {
+        width:370px;
+        height:200px;
+        position:relative;
+        background-color: rgba(255,0,0,0.5);
+        h4 {
+        color:white;
+        padding-left:10px;
+        padding-top:10px;
+        }
+        li {
+            margin-top:10px;
+        }
+        a {
+            overflow:hidden;
+            text-decoration:none;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            color:white;
+        }
+    }
+}
+.mainpage_title {
+    width:100%;
+    margin-top:100px;
+    h2 {
+        
+    }
+}
+.main_div2 {
+    width:100%;
+    height:770px;
+    position:relative;
+    z-index:1;
+    margin-top:30px;
+    background-color:white;
+    -webkit-box-shadow:inset 0 2px 0 rgba(255,255,255,1);
+    .main_div2_left {
+    float:left;
+    width:49%;
+   
+    height:770px;
+    .concept_box {
+     width:100%;
+     height:105px;
+     padding-left:20px;
+     h4 {
+    font-weight:500 !important;
+     }
+    }
+    display:inline-block;
+    }
+    .main_div2_right {
+    float:left;
+    margin-left:1%;
+    width:48%;
+   
+    height:770px;
+    display:inline-block;
+        .top_pic {
+            width:100%;
+            height:250px;
+        }
+         .mid_pic {
+           
+            width:100%;
+            margin-top:10px;
+            display:inline-block;
+            height:250px;
+            .mid_pic1 {
+            width:48%;
+            margin-right:1%;
+            height:250px;
+            display:inline-block;
+            }
+            .mid_pic2 {
+            width:49%;
+            margin-left:1%;
+            height:250px;
+            display:inline-block;
+            }
+        }
+        .bot_pic {
+           
+            width:100%;
+            margin-top:10px;
+            height:250px;
+        }
+    }
+}
+.main_div3 {
+    width:100%;
+    height:85vh;
+    position:relative;
+    z-index:1;
+    margin-top:50px;
+    background-color:white;
+    -webkit-box-shadow:inset 0 2px 0 rgba(255,255,255,1);
+}
+.main_div2_con {
+    width:100%;
+    height:85vh;
+    position:relative;
+    z-index:1;
+    background-color:white;
+    .content_title {
+        margin-left:20px;
+        margin-top:20px;
+        width:100%;
+        h2 {
+            font-weight:600;
+        }
+        border-bottom:3px solid #8A0808;
+    }
+    .com_content_img {
+        height:60vh;
+        display:inline-block;
+        float:left;
+        width:40%;
+        padding-left:20px;
+        margin-top:20px;
+        h4 {
+            text-align:left;
+            font-size:14px;
+            line-height:20px;
+        }
+    }
+    .com_content_text {
+        height:60vh;
+        float:right;
+        width:40%;
+        display:inline-block;
+        margin-top:20px;
+        background-color:yellow;
+        img {
+            width:100%;
+            height:60vh;
+        }
+    }
+}
+.main_div3_con {
+    width:100%;
+   
+    height:85vh;
+    position:relative;
+    z-index:1;
+    .content_title {
+        margin-left:20px;
+        margin-top:20px;
+        width:100%;
+        h2 {
+            font-weight:600;
+        }
+        border-bottom:3px solid #8A0808;
+    }
+    .com_content_img {
+        padding-left:30px;
+        height:60vh;
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:50px;
+        
+        h4 {
+            font-size:30px;
+        }
+        p {
+            font-size:15px;
+        }
+    }
+    .com_content_text {
+        height:60vh;
+        float:right;
+        width:40%;
+        display:inline-block;
+        margin-top:20px;
+    }
+}
+// 메인페이지 종료
+// 카탈로그 
+.cata_title {
+    margin-top:100px;
+    text-align:center;
+    h2 {
+    font-size:50px;
+    }
+}
+.catalogue_div {
+    width:100%;
+    height:1000px;
+    background-color:white;
+    margin-top:20px;
+}
+.catalogue_all {
+    width:100%;
+    height:auto;
+    max-height:150vh;
+    background-color:white;
+    margin-top:20px;
+}
+.book {
+    width:20%;
+    margin-left:2%;
+    margin-right:2%;
+    height:300px;
+    display:inline-block;
+    margin-top:20px;
+    margin-bottom:20px;
+    img {
+        width:100%;
+        height:300px;
+    }
+    p {
+    display:block;
+    margin-top:-50px;
+    color:white;
+    font-size:20px;
+    font-weight:600;
+    text-align:center;
+    }
+}
+// 카탈로그 종료
+// 브랜드
+
+.brand1 {
+            display:inline-block;
+    width:100%;
+    height:600px;
+    background-color:white;
+    margin-top:30px;
+    .brand1_left {
+        display:inline-block;
+        width:30%;
+        margin-left:3%;
+        margin-right:3%;
+        height:300px;
+        text-align:center;
+        margin-top:150px;
+    }
+    .brand1_right{
+        display:inline-block;
+        width:55%;
+        margin-left:3%;
+        margin-right:3%;
+        height:400px;
+        margin-top:100px;
+        img {
+            width:100%;
+        }
+    }
+}
+.brand2 {
+    display:inline-block;
+    width:100%;
+    height:600px;
+    background-color:white;
+    .brand2_left {
+        display:inline-block;
+        width:55%;
+        margin-left:3%;
+        margin-right:3%;
+        height:400px;
+        top:-50px;
+        img {
+            width:100%;
+            margin-top:-100px;
+        }
+    }
+    .brand2_right {
+        display:inline-block;
+        width:30%;
+        margin-left:3%;
+        margin-right:3%;
+        height:300px;
+        text-align:center;
+        margin-top:150px;
+    }
+}
+// 브랜드 종료
+// 스토어 시작
+    .store_big_pic {
+        width:100%;
+        height:700px;
+        position:relative;
+        img {
+            width:100%;
+            height:700px;
+        }
+        .store_big_pic_p {
+              margin-top:-700px;
+              text-align:center;
+              position:relative;
+              width:100%;
+              height:700px;
+              background-color:rgba(0,0,0,0.3);
+            h4 {
+                color:white;
+                margin:0;
+                font-size:35px;
+                padding-top:350px;
+            }
+        }
+    }
+    
+    .store_list {
+        width:100%;
+        margin-top:50px;
+        min-height:600px;
+        height:auto;
+        .store_each {
+            width:20%;
+            margin-left:1%;
+            margin-right:1%;
+            display:inline-block;
+            height:200px;
+            border-bottom:1px solid #C0C0C0;
+            h5 {
+                font-weight:700;
+                padding-top:30px;
+            }
+            p {
+                font-size:10px;
+            }
+            a {
+                color:black;
+            }
+        }
+        .country_each {
+            width:20%;
+            float:left;
+            margin-left:1%;
+            margin-right:1%;
+            display:inline-block;
+            height:250px;
+            border-bottom:1px solid #C0C0C0;
+            h5 {
+                font-weight:700;
+                padding-top:30px;
+            }
+            p {
+                font-size:10px;
+            }
+            a {
+                color:black;
+            }
+        }
+    }
+    .store_div {
+        width:100%;
+        height:400px;
+        margin-top:100px;
+        .store_div_pic {
+            width:65%;
+            height:400px;
+            margin-right:2%;
+            display:inline-block;
+            float:left;
+            img {
+                width:100%;
+                height:400px;
+            }
+        }
+        .store_detail {
+                width:30%;
+                display:inline-block;
+                margin-right:1%;
+                height:400px;
+                .store_detail_up {
+                    width:100%;
+                    height:340px;
+                }
+                .store_name {
+                    width:100%;
+                    height:60px;
+                    background-color:#c0c0c0;
+                    text-align:center;
+                    padding-top:10px;
+                }
+        }
+    }
+    // 스토어 종료
+    // footer
+    .foot {
+        margin-top:50px;
+        width:100%;
+        border-top:1px solid #C0C0C0;
+        height:200px;
+    }
+    .footer_div {
+        width:100%;
+        height:100px;
+        padding-top:50px;
+    }
+    .footer_each {
+        width:22%;
+        float: left;
+        margin-left:1%;
+        display:inline-block;
+        margin-right:1%;
+         a {
+                color:black;
+                font-weight:50;
+            }
+    }
+    .footer_down {
+        width:100%;
+        height:100px;
+        text-align:center;
+        margin-top:70px;
+        h4 {
+            font-size:13px;
+        }
+    }
+    // footer 종료
+    // with 시작
+    
+    // with 종료
+    // inquire 시작
+    
+    .inquire_div {
+        width:50%;
+        margin-left:25%;
+        margin-right:25%;
+        height:700px;
+        background-color:white;
+    }
+    .inquire_name {
+        background-color:white;
+        width:100%;
+        height:60px;
+        font-size:20px;
+        border:1px solid #c0c0c0;
+    }
+    .inquire_file {
+        background-color:white;
+        width:100%;
+        padding-top:10px;
+        padding-left:10px;
+        height:60px;
+        font-size:20px;
+        border:1px solid #c0c0c0;
+    }
+    .inquire_content {
+        width:100%;
+        height:300px;
+        font-size:20px;
+    }
+    // inquire 종료
+    // 게시판 
+    .table {
+        width:100%;
+        text-align:center;
+    }
+    .table_head_row {
+        text-align:center;
+        background-color:#C0C0C0;
+        height:40px;
+    }
+    .table_head_num {
+        width:10%;
+         text-align:center;
+    }
+    .table_head_title {
+        width:65%;
+         text-align:center;
+    }
+    .table_head_day {
+        width:10%;
+         text-align:center;
+    }
+    .table_con_row {
+        text-align:center;
+        background-color:white;
+        height:40px;
+        border-bottom:1px solid #c0c0c0;
+    }
+    // contact us 시작
+    .contact_div {
+        width:100%;
+        height:170px;
+        p {
+            font-size:15px;
+        }
+        h4 {
+            font-size:20px;
+        }
+        margin-top:50px;
+    }
+    
+    
+    // 폼 업로드
+    .up_title {
+        margin-left:50px;
+        height:80px;
+        width:100%;
+    }
+    .photo_up {
+        margin-left:50px;
+        height:80px;
+        width:100%;
+    }
+    .border {
+        width:100%;
+        height:300px;
+        border-top:1px solid #c0c0c0;
+    }
+    .martop {
+        margin-top:-70px;
+    }
+    
+    // with 커터앤벅
+    
+    .with_title {
+        width:100%;
+        height:50px;
+        border-bottom:2px solid #B40404;
+        h3 {
+        font-weight:600;
+        }
+    }
+    
+    .with_content {
+        width:100%;
+        min-height:200px;
+        height:auto;
+        ul {
+            margin-top:30px;
+            li {
+            height:30px;
+            padding:7px 7px;
+            }
+        }
+        
+        img {
+            width:90%;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:30px;
+        }
+    }
+    
+   .table_with {
+        width:90%;
+        margin:30px auto;
+        text-align:center;
+    }
+    .table_head_row_with {
+        text-align:center;
+        background-color:#F2F2F2;
+        height:40px;
+    }
+    .table_head_num_with {
+        width:20%;
+         text-align:center;
+    }
+    .table_head_title_with {
+        width:80%;
+        text-align:center;
+    }
+    .table_con_row_with {
+        text-align:center;
+        background-color:white;
+        height:40px;
+        border-bottom:1px solid #c0c0c0;
+    }
+    .table_list {
+        text-align:left;
+       padding-bottom:20px;
+    }
+    
+    
+    .video {
+    width:100%;
+    height:100vh;
+    margin-top:50px;
+    }
+    
+    .detail_title {
+    width:80%;
+    margin-left:auto;
+    background-color:#f2f2f2;
+    margin-right:auto;
+    height:50px;
+    padding-top:1px;
+    text-align:center;
+    h3 {
+        font-size:20px;
+    }
+    }
+    .detail_day {
+    padding-left:15px;
+    height:50px;
+    width:80%;
+    padding-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    }
+     .detail_content {
+    margin-top:30px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    min-height:600px;
+    height:auto;
+        .detail_p {
+            width:80%;
+            display:block;
+            margin-top:50px;
+            text-align:left;
+            margin-left:auto;
+            margin-right:auto;
+        p{
+            width:100%;
+            display:block;
+            font-size:14px;
+        }
+        }
+         img {
+         width:65%;
+         display:block;
+         margin-left:auto;
+         margin-right:auto;
+         }
+    }
+    .prev_next {
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+        height:60px;
+        border-top:1px solid #f2f2f2;
+        border-bottom:1px solid #f2f2f2;
+        a {
+        display:block;
+        padding-top:5px;
+        box-sizing:border-box;
+        width:100%;
+        height:30px;
+        }
+    }
+    
+// 페이지네이션
+
+.pagination_div {
+    text-align: center;
+}
+    .current {
+        display: inline-block;
+        font-size: 16px;
+        text-decoration: none;
+        padding-top:10px;
+        font-weight: bold;
+        display:inline-block;
+        box-sizing: border-box;
+        width:40px;
+        height:40px;
+        background-color: white;
+        border-radius:3px;
+        border:0.5px solid #BDBDBD;
+        color: #2f609c;
+        font-style: normal;
+    }
+    .pagination a {
+        color:#cccccc !important;
+        font-size:16px;
+        font-style: normal;
+        border-radius:3px;
+        display:inline-block;
+        box-sizing: border-box;
+        width:40px;
+        padding-top:10px;
+        border:0.5px solid #BDBDBD;
+        background-color: white;
+        height:40px;
+    }
+
+    .pagination_links a{
+        display:none;
+    }
+    .next_page,.previous_page{
+        color:#cccccc !important;
+        font-size:16px;
+        font-style: normal;
+        border-radius:3px;
+        display:inline-block;
+        box-sizing: border-box;
+        width:40px;
+        padding-top:10px;
+        border:0.5px solid #BDBDBD;
+        background-color: white;
+        height:40px;
+    }
+    .pagination_links{
+        text-align: center;
+    }
+    .previous_page.disabled, .next_page.disabled{
+        display: none !important;
+    }
+    .pagination_links a{
+        text-decoration: none;
+    }
+    .pagination_links a:hover{
+        text-decoration: underline;
+    }
+    .pagination_links span{
+        text-decoration: none;
+        display: inline-block;
+        color: #000000;
+    }
+@media all and (max-width : 420px) {
+.current {
+        display: inline-block;
+        font-size: 12px;
+        text-decoration: none;
+        padding-top:5px;
+        font-weight: bold;
+        display:inline-block;
+        box-sizing: border-box;
+        width:25px;
+        height:25px;
+        background-color: white;
+        border-radius:3px;
+        border:0.5px solid #BDBDBD;
+        color: #2f609c;
+        font-style: normal;
+    }
+    .pagination a {
+        color:#cccccc !important;
+        font-size:12px;
+        font-style: normal;
+        border-radius:3px;
+        display:inline-block;
+        box-sizing: border-box;
+        width:25px;
+        padding-top:5px;
+        border:0.5px solid #BDBDBD;
+        background-color: white;
+        height:25px;
+    }
+     .next_page,.previous_page{
+        color:#cccccc !important;
+        font-size:12px;
+        font-style: normal;
+        border-radius:3px;
+        display:inline-block;
+        box-sizing: border-box;
+        width:25px;
+        padding-top:5px;
+        border:0.5px solid #BDBDBD;
+        background-color: white;
+        height:25px;
+    }
+    .pagination_div {
+        margin-top:-5px;
+        text-align: center;
+    }
+}
+
+// 페이지네이션 끝
+// 관리자 페이지
+
+.admin {
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    ul {
+        display:block;
+        width:100%;
+        background-color:#f2f2f2;
+        border-bottom:1px solid #666;
+        box-shadow: 0.1px 0 #ddd;
+        text-align:left;
+        li {
+            display:block;
+            height:50px;
+            a {
+                display:block;
+                padding:8px 0 20px;
+            }
+        }
+    }
+}
+
+.admin_subtitle {
+    width:100%;
+    padding:20px auto;
+    
+}

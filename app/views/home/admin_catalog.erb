@@ -1,0 +1,29 @@
+<div class="container" style="height:800px;">
+    <div class="cata_title">
+        <h2>카달로그 관리</h2>
+    </div>
+<div class="admin_subtitle">
+<a href="/posts/new">새로 등록</a>
+</div>
+<table class="table">
+         <thead>
+         <tr class="table_head_row">
+         <th class="table_head_num">번호</th>
+         <th class="table_head_title">제목</th>
+         <th class="table_head_day">등록일</th>
+         <th class="table_head_day">삭제</th>
+         </tr>
+         </thead>
+         <tbody>
+              <% @bigmain.each do |n| %>
+              <tr class="table_con_row">
+              <td class=""><%= n.id %></td>
+              <td><%= n.title %></td>
+              <td class=""><%= n.created_at.in_time_zone("Asia/Shanghai").strftime("%Y-%m-%d") %></td>
+              <td><a href="/home/posts_destroy/<%=n.id%>"> 삭제</a></td>
+              </tr> 
+              <% end %>
+         </tbody>
+     </table>
+     <div class="pagination_div"><%= will_paginate @bigmain, :previous_label => t("<<"), :next_label => t(">>")%></div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+    <form action= "/content/gongmo_upload" method= "POST"  enctype="multipart/form-data" accept-charset="UTF-8">
+        <%= form_for(@post, :html => { :multipart => true }) do |f| %>
+            <div class="field">
+             <%= f.label :name %><br>
+             <%= f.text_field :name %>
+           </div>
+        
+           <%= f.fields_for :cata_attachments do |p| %>
+             <div class="field">
+               <%= p.label :content %><br>
+               <%= p.file_field :content, :multiple => true, name: "cata_attachments[content][]" %>
+             </div>
+           <% end %>
+        
+           <div class="actions">
+             <%= f.submit %>
+           </div>
+          <% end %>
+      </form>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="cata_title">
+        <h2><a href="/home/news" style="color:black;">문의사항</a></h2>
+    </div>
+    <div class="detail_title">
+        <h3><%= @qna.title %></h3>
+    </div>
+    <div class="detail_day">
+        <p>등록일: <%= @qna.created_at.in_time_zone("Asia/Seoul").strftime("%Y-%m-%d") %></p>
+        <p>작성자: <%= @qna.name %></p>
+        <p>이메일: <%= @qna.email %></p>
+        <p>전화번호: <%= @qna.phone %></p>
+    </div>
+    <div class="detail_content">
+        <%= image_tag @qna.qna_pic %>
+        <div class="detail_p">
+            <p><%= @qna.content %>
+            </p>
+        </div>
+    </div>
+    <div class="detail_title">
+    </div>
+    <!--# <div class="prev_next">-->
+    <!--#     <a><strong>이전글</a>-->
+    <!--#     <a><strong>다음글</strong></a>-->
+    <!--# </div>-->
+</div>

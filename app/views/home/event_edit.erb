@@ -1,0 +1,27 @@
+<div class="container" style="height:1100px;">
+    <div class="cata_title">
+        <h2>EVENT 수정</h2>
+    </div>
+    <div class="inquire_div">
+      <form action= "/home/event_edit_com" method= "POST"  enctype="multipart/form-data" accept-charset="UTF-8">
+           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <div class="inquire_name">
+            <input type="text" value="<%= @event.title %>" style="padding-left:10px;" class="inquire_name" name="title">
+            <input type="hidden" value="<%= @event.id %>" style="padding-left:10px;" class="inquire_name" name="id">
+        </div>
+        <div class="inquire_name">
+            <input type="text" value="<%= @event.title_c %>"  style="padding-left:10px;" class="inquire_name" name="title_c">
+        </div>
+        <div class="inquire_name">
+            <input type="file" value="<%= @event.event_pic %>"  style="padding-left:10px;" class="inquire_file" name="pic">
+        </div>
+        <div class="inquire_content">
+            <input type="textarea" value="<%= @event.content %>"  style="padding-left:10px;" class="inquire_content" name="content">
+        </div>
+        <div class="inquire_content">
+            <input type="textarea" value="<%= @event.content_c %>"  style="padding-left:10px;" class="inquire_content" name="content_c">
+        </div>
+        <button type="submit" class="btn btn-success" style="margin:10px auto;"> 수정하기</button>
+        </form>
+    </div>
+</div>

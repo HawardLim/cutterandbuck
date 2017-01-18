@@ -1,0 +1,31 @@
+<div class="container" style="height:800px;">
+    <div class="cata_title">
+        <h2>스토어</h2>
+    </div>
+    <div class="admin_subtitle">
+<h3>매장 관리</h3><a href="/home/write_store">새로 등록</a>
+</div>
+<table class="table">
+         <thead>
+         <tr class="table_head_row">
+         <th class="table_head_num">번호</th>
+         <th class="table_head_title">제목</th>
+         <th class="table_head_day">등록일</th>
+         <th class="table_head_day">삭제</th>
+         <th class="table_head_day">수정</th>
+         </tr>
+         </thead>
+         <tbody>
+              <% @news.each do |n| %>
+              <tr class="table_con_row">
+              <td class=""><%= n.id %></td>
+              <td><a href="/home/store_detail/<%=n.id%>"><%= n.name %></td>
+              <td class=""><%= n.created_at.in_time_zone("Asia/Shanghai").strftime("%Y-%m-%d") %></td>
+              <td><a href="/home/store_destroy/<%=n.id%>"> 삭제</a></td>
+              <td><a href="/home/store_edit/<%=n.id%>"> 수정</a></td>
+              </tr> 
+              <% end %>
+         </tbody>
+     </table>
+     <div class="pagination_div"><%= will_paginate @news, :previous_label => t("<<"), :next_label => t(">>")%></div>
+</div>

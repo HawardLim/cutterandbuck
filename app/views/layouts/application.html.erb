@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CutterandBuck</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+ <%= javascript_include_tag "//cdn.ckeditor.com/4.5.10/standard/ckeditor" %>
+
+</head>
+<body>
+<%= render :partial => "/home/navbar" %>
+<%= yield %>
+<%= render :partial => "/home/footer" %>
+</body>
+</html>

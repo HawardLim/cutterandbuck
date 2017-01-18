@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="store_div">
+        <div class="store_div_pic">
+           <%=image_tag @store.photo %>
+        </div>
+        <div class="store_detail">
+            <div class="store_detail_up">
+                <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> <%= @store.address %></p>
+                <br>
+                <p><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> <%= @store.phone%></p>
+                <br>
+                <br>
+                <p><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Working Hour</p>
+                <p> weekdays : <%= @store.weekday %> </p>
+                <p> weekends : <%= @store.weekend %> </p>
+                <p> holidays : <%= @store.holiday %> </p>
+                <br>
+            </div>
+            <div class="store_name">
+                <h4><%= @store.name %></h4>
+            </div>
+        </div>
+    </div>
+    <div class="cata_title">
+        <h3>STORE LIST</h3s>
+    </div>
+    <div class="store_list">
+        <% @stores.each do |s| %>
+        <div class="store_each">
+            <h5><%= s.name %></h5>
+            <p><%= s.address %></p>
+            <p><%= s.phone %></p>
+            <br>
+            <a href="/home/store_detail/<%=s.id%>">상세사항</a>
+        </div>
+        <% end %>
+    </div>
+</div>

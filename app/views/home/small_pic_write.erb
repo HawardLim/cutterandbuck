@@ -1,0 +1,26 @@
+<div class="container" style="height:1100px;">
+    <div class="cata_title">
+        <h2>메인페이지 큰 사진 업로드</h2>
+    </div>
+    <div class="inquire_div">
+      <form action= "/home/news_upload" method= "POST"  enctype="multipart/form-data" accept-charset="UTF-8">
+           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <div class="inquire_name">
+            <input type="text" placeholder="제목을 입력해주세요" style="padding-left:10px;" class="inquire_name" name="title">
+        </div>
+        <div class="inquire_name">
+            <input type="file" placeholder="사진1을 업로드 해주세요"  style="padding-left:10px;" class="inquire_file" name="pic1">
+        </div>
+        <div class="inquire_name">
+            <input type="file" placeholder="사진2을 업로드 해주세요"  style="padding-left:10px;" class="inquire_file" name="pic2">
+        </div>
+        <div class="inquire_name">
+            <input type="file" placeholder="사진3을 업로드 해주세요"  style="padding-left:10px;" class="inquire_file" name="pic3">
+        </div>
+        <div class="inquire_name">
+            <input type="file" placeholder="사진4을 업로드 해주세요"  style="padding-left:10px;" class="inquire_file" name="pic4">
+        </div>
+        <button type="submit" class="btn btn-success" style="margin:10px auto"> 등록하기</button>
+      </form>
+    </div>
+</div>

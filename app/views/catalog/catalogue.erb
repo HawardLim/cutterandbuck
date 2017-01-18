@@ -1,0 +1,66 @@
+  
+<div class="container">
+    <div class="cata_title">
+        <h2>CATALOGUE</h2>
+        <button class="btn btn-success" style="width:120px;" onclick="location.href='/content/gongmo_spec_write'">
+        카달로그 등록
+        </button>
+    </div>
+    <div class="catalogue_div">
+        <ul class="bxslider">
+          <li><img src="/assets/1.jpg" /></li>
+          <li><img src="/assets/1.jpg" /></li>
+          <li><img src="/assets/1.jpg" /></li>
+        </ul>
+        <div id="bx-pager">
+            <a data-slide-index="0" href=""><img src="/assets/1.jpg" /></a>
+            <a data-slide-index="1" href=""><img src="/assets/1.jpg" /></a>
+            <a data-slide-index="2" href=""><img src="/assets/1.jpg" /></a>
+        </div>
+    </div>
+    <div class="mainpage_title">
+        <h2>ALL CATALOGUE</h2>
+    </div>
+    <div class="catalogue_all">
+        <div class="book">
+            <img src="/assets/cat_t11.jpg">
+            <p>2016 FW</p>
+        </div>
+         <div class="book">
+            <img src="/assets/cat_t10.jpg">
+            <p>2016 FW</p>
+        </div>
+         <div class="book">
+            <img src="/assets/cat_t12.jpg">
+            <p>2016 FW</p>
+        </div>
+         <div class="book">
+            <img src="/assets/cat_t10.jpg">
+            <p>2016 FW</p>
+        </div>
+         <div class="book">
+            <img src="/assets/cat_t11.jpg">
+            <p>2016 FW</p>
+        </div>
+    </div>
+</div>
+<style>
+    #bx-pager img {
+        width:150px;
+        margin-left:20px;
+    }
+    #bx-pager {
+        margin:0 auto;
+        text-align:center;
+    }
+    .bx-wrapper img {
+        width:100%;
+    }
+</style>
+<script>
+   $('.bxslider').bxSlider({
+      pagerCustom: '#bx-pager',
+      auto: true,
+  autoControls: true
+    });
+</script>
