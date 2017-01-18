@@ -10,41 +10,14 @@
         <h3>STORE LIST</h3s>
     </div>
     <div class="store_list">
+        <% @store.each do |s| %>
         <div class="store_each">
-            <h5>상해 컨벤션 센터 매장</h5>
-            <p>서울특별시 종로구 혜화동 1201번지</p>
-            <p>02-1023-1231</p>
+            <h5><%= s.name %></h5>
+            <p><%= s.address %></p>
+            <p><%= s.phone %></p>
             <br>
-            <a href="/home/store_detail">상세사항</a>
+            <a href="/home/store_detail/<%= s.id %>">상세사항</a>
         </div>
-        <div class="store_each">
-            <h5>상해 컨벤션 센터 매장</h5>
-            <p>서울특별시 종로구 혜화동 1201번지</p>
-            <p>02-1023-1231</p>
-            <br>
-            <a href>상세사항</a>
-        </div>
-        <div class="store_each">
-            <h5>상해 컨벤션 센터 매장</h5>
-            <p>서울특별시 종로구 혜화동 1201번지</p>
-            <p>02-1023-1231</p>
-            <br>
-            <a href>상세사항</a>
-        </div>
-        <div class="store_each">
-            <h5>상해 컨벤션 센터 매장</h5>
-            <p>서울특별시 종로구 혜화동 1201번지</p>
-            <p>02-1023-1231</p>
-            <br>
-            <a href>상세사항</a>
-        </div>
-        <div class="store_each">
-            <h5>상해 컨벤션 센터 매장</h5>
-            <p>서울특별시 종로구 혜화동 1201번지</p>
-            <p>02-1023-1231</p>
-            <br>
-            <a href>상세사항</a>
-        </div>
-        
+        <% end %> 
     </div>
 </div>

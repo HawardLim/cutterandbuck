@@ -2,6 +2,7 @@ class HomeController < ApplicationController
   def index
     @bigmain = Bigmain.last
     @smallmain = Smallmain.last
+    @news = New.paginate(:page => params[:page], per_page: 5).order('created_at DESC')
   end
   def qna_upload
      @qna = Qna.new
@@ -98,6 +99,9 @@ class HomeController < ApplicationController
   def event
     @event = Event.paginate(:page => params[:page], per_page: 10)
     @event = @event.order('created_at DESC')
+  end
+  def store
+    @store = Store.all
   end
   def news_detail 
     @news = New.find(params[:id])
