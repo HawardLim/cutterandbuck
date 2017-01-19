@@ -1,3 +1,6 @@
+<% if user_signed_in? %>
+         <% if current_user.email == "admin@naver.com"%>
+
 <div class="container">
     <div class="cata_title">
         <h2><a href="/home/news" style="color:black;">문의사항</a></h2>
@@ -25,3 +28,11 @@
     <!--#     <a><strong>다음글</strong></a>-->
     <!--# </div>-->
 </div>
+
+<%else%>
+<h3>접근이 불가능한 페이지 입니다.</h3>
+<% end%>
+
+
+
+<% end%>

@@ -1,12 +1,20 @@
 
 
 <div class="main_div1">
+    <% if @bigmain.nil? %>
     <ul class="bxslider">
         <li><img src="/assets/1.jpg"></li>
         <li><img src="/assets/1.jpg"></li>
         <li><img src="/assets/1.jpg"></li>
         <li><img src="/assets/1.jpg"></li>
     </ul>
+    <% else %>
+    <ul class="bxslider">
+        <li><%=image_tag @bigmain.pic1 %></li>
+        <li><%=image_tag @bigmain.pic2 %></li>
+        <li><%=image_tag @bigmain.pic3 %></li>
+    </ul>
+    <% end %>
     <div class="banner_box">
         <div class="news_box">
             <h4>NEWS</h4>
@@ -18,6 +26,14 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+      $('.bxslider').bxSlider({
+          auto: true,
+  autoControls: true
+      });
+    });
+</script>
 <div class="container">
 <div class="main_div2">
    <div class="main_div2_left">
@@ -47,51 +63,72 @@
            <p>High-End 골프 웨어의 스타일을 경험해보세요</p>
        </div>
    </div>
+   
    <div class="main_div2_right">
-       <div class="top_pic adjust">
+       <div class="top_pic">
           <img src="/assets/itary.jpg">
        </div>
        <div class="mid_pic">
-           <div class="mid_pic1 adjust">
+           <div class="mid_pic1">
                 <img src="/assets/original.jpg">
            </div>
-            <div class="mid_pic2 adjust">
+            <div class="mid_pic2">
                <img src="/assets/performance.jpg">
            </div>
        </div>
-       <div class="bot_pic adjust">
+       <div class="bot_pic">
            <img src="/assets/annika.jpg">
        </div>
    </div>
+
+   <!--<div class="main_div2_right">-->
+   <!--    <div class="top_pic adjust">-->
+   <!--       <%=image_tag @smallmain.pic1 %>-->
+   <!--    </div>-->
+   <!--    <div class="mid_pic">-->
+   <!--        <div class="mid_pic1 adjust">-->
+   <!--             <%=image_tag @smallmain.pic2 %>-->
+   <!--        </div>-->
+   <!--         <div class="mid_pic2 adjust">-->
+   <!--            <%=image_tag @smallmain.pic3 %>-->
+   <!--        </div>-->
+   <!--    </div>-->
+   <!--    <div class="bot_pic adjust">-->
+   <!--        <%=image_tag @smallmain.pic4 %>-->
+   <!--    </div>-->
+   <!--</div>-->
 </div>
 
 </div>
 
-<script>
-  window.onload = function() {
-  var divs = document.getElementsByClassName('adjust');
-  for (var i = 0; i < divs.length; ++i) {
-    var div = divs[i];
-    var divAspect = div.offsetHeight / div.offsetWidth;
-    div.style.overflow = 'hidden';
+<!--<script>-->
+<!--  window.onload = function() {-->
+<!--  var divs = document.getElementsByClassName('adjust');-->
+<!--  for (var i = 0; i < divs.length; ++i) {-->
+<!--    var div = divs[i];-->
+<!--    var check = 0;-->
+<!--    var divAspect = div.offsetHeight / div.offsetWidth;-->
+<!--    div.style.overflow = 'hidden';-->
     
-    var img = div.querySelector('img');
-    var imgAspect = img.height / img.width;
-
-    if (imgAspect <= divAspect) {
-      // 이미지가 div보다 납작한 경우 세로를 div에 맞추고 가로는 잘라낸다
-      var imgWidthActual = div.offsetHeight / imgAspect;
-      var imgWidthToBe = div.offsetHeight / divAspect;
-      var marginLeft = -Math.round((imgWidthActual - imgWidthToBe) / 2)
-      img.style.cssText = 'width: auto; height: 100%; margin-left: '
-                      + marginLeft + 'px;'
-    } else {
-      // 이미지가 div보다 길쭉한 경우 가로를 div에 맞추고 세로를 잘라낸다
-      img.style.cssText = 'width: 100%; height: auto; margin-left: 0;';
-    }
-  }
-};
-</script>
+<!--    var img = div.querySelector('img');-->
+<!--    var imgAspect = img.height / img.width;-->
+<!--    if (i <= 4) {-->
+<!--    if (imgAspect <= divAspect) {-->
+      <!--// 이미지가 div보다 납작한 경우 세로를 div에 맞추고 가로는 잘라낸다-->
+<!--      var imgWidthActual = div.offsetHeight / imgAspect;-->
+<!--      var imgWidthToBe = div.offsetHeight / divAspect;-->
+<!--      var check = 1;-->
+<!--      var marginLeft = -Math.round((imgWidthActual - imgWidthToBe) / 2)-->
+<!--      img.style.cssText = 'width: auto; height: 100%; margin-left: '-->
+<!--                      + marginLeft + 'px;'-->
+<!--    } else {-->
+      <!--// 이미지가 div보다 길쭉한 경우 가로를 div에 맞추고 세로를 잘라낸다-->
+<!--      var check = 1;-->
+<!--      img.style.cssText = 'width: 100%; height: auto; margin-left: 0;';-->
+<!--    } } else { }-->
+<!--  }-->
+<!--};-->
+<!--</script>-->
 <style>
     .bx-pager {
            position: relative !important;
@@ -118,13 +155,28 @@
     .bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
         display:none;
     }
+    .bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:none;
+    z-index: 2000;
+    }
+    .bx-slider {
+        width: 550%; 
+        position: relative; 
+        transition-duration: 0s; 
+        transform: translate3d(-40px, 0px, 0px);
+    }
+    .bx-wrapper img {
+    max-width: 110%;
+    width:110%;
+    margin-left:-50px;
+    display: block;
+    }
 </style>
 
-<script>
-    $(document).ready(function(){
-      $('.bxslider').bxSlider({
-          auto: true,
-  autoControls: true
-      });
-    });
-</script>

@@ -132,18 +132,18 @@ class HomeController < ApplicationController
   def big_pic_upload
     @pic = Bigmain.new
     @pic.title = params[:title]
-    file = params[:pic1]
-    uploader = StorepicUploader.new
-    uploader.store!(file)
-    @pic.pic1 = uploader.url
-    file = params[:pic2]
-    uploader = StorepicUploader.new
-    uploader.store!(file)
-    @pic.pic2 = uploader.url
-    file = params[:pic3]
-    uploader = StorepicUploader.new
-    uploader.store!(file)
-    @pic.pic3 = uploader.url
+    file1 = params[:pic1]
+    uploader1 = CutterUploader.new
+    uploader1.store!(file1)
+    @pic.pic1 = uploader1.url
+    file1 = params[:pic2]
+    uploader2 = CutterUploader.new
+    uploader2.store!(file1)
+    @pic.pic2 = uploader2.url
+    file1 = params[:pic3]
+    uploader3 = CutterUploader.new
+    uploader3.store!(file1)
+    @pic.pic3 = uploader3.url
     @pic.save
     redirect_to "/home/admin"
   end
@@ -185,22 +185,22 @@ class HomeController < ApplicationController
   def small_pic_upload
     @pic = Smallmain.new
     @pic.title = params[:title]
-    file = params[:pic1]
-    uploader = StorepicUploader.new
-    uploader.store!(file)
-    @pic.pic1 = uploader.url
-    file = params[:pic2]
-    uploader = StorepicUploader.new
-    uploader.store!(file)
-    @pic.pic2 = uploader.url
-    file = params[:pic3]
-    uploader = StorepicUploader.new
-    uploader.store!(file)
-    @pic.pic3 = uploader.url
-    file = params[:pic4]
-    uploader = StorepicUploader.new
-    uploader.store!(file)
-    @pic.pic4 = uploader.url
+    file1 = params[:pic1]
+    uploader1 = CutterUploader.new
+    uploader1.store!(file1)
+    @pic.pic1 = uploader1.url
+    file2 = params[:pic2]
+    uploader2 = CutterUploader.new
+    uploader2.store!(file2)
+    @pic.pic2 = uploader2.url
+    file3 = params[:pic3]
+    uploader3 = CutterUploader.new
+    uploader3.store!(file3)
+    @pic.pic3 = uploader3.url
+    file4 = params[:pic4]
+    uploader4 = CutterUploader.new
+    uploader4.store!(file4)
+    @pic.pic4 = uploader4.url
     @pic.save
     redirect_to "/home/admin"
   end

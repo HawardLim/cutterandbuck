@@ -31,6 +31,16 @@
                         <li id="navlicenter">
                             <a href="/home/store">STORE</a>
                         </li>
+                        <% if user_signed_in? %>
+                        <% if current_user.email == "admin@naver.com"%>
+                        <li id="navlicenter">
+                            <a href="/home/admin">관리자페이지로 이동</a>
+                        </li>
+                        <li id="navlicenter">
+                            <%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
+                        </li>
+                        <%end%>
+                        <%end%>
                     </ul>
                 </div>
             </div>
