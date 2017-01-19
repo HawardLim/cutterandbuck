@@ -9,7 +9,7 @@ class PostsController < ApplicationController
       @posts = Post.all
     else
       @post_last_attach = @post_last.post_attachments.paginate(:page => params[:page], per_page: 6)
-      @post_last_attachs = @post_last_attach.order('created_at DESC')
+      @post_last_attachs = @post_last_attach
       @posts = Post.all
     end
   end
@@ -20,7 +20,7 @@ class PostsController < ApplicationController
      @posts = Post.all
      @post =Post.find(params[:id])
      @post_attachments = @post.post_attachments.paginate(:page => params[:page], per_page: 6)
-     @post_attachmentss = @post_attachments.order('created_at DESC')
+     @post_attachmentss = @post_attachments
   end
 
   # GET /posts/new
