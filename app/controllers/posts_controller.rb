@@ -48,6 +48,9 @@ class PostsController < ApplicationController
             @post_attachment.id_of_pic = i
             i+= 1
             #end
+            if i > 5
+              i = 0
+            end
             @post_attachment.save
          end
          format.html { redirect_to @post, notice: 'Post was successfully created.' }
