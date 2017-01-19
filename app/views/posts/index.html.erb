@@ -2,13 +2,6 @@
 <div class="container">
     <div class="cata_title">
         <h2>CATALOGUE</h2>
-         <% if user_signed_in? %>
-         <% if current_user.email == "admin@naver.com"%>
-        <button class="btn btn-success" style="width:120px;">
-        <%= link_to 'New Post', new_post_path %>
-        </button>
-        <% end %>
-        <% end %>
     </div>
     <div class="catalogue_div">
         <% if @post_last_attach.nil?%>
