@@ -183,7 +183,6 @@ body {
         width:40%;
         display:inline-block;
         margin-top:20px;
-        background-color:yellow;
         img {
             width:100%;
             height:60vh;
@@ -852,3 +851,87 @@ body {
     }
 }
 // 네브바 종료
+
+@media screen and (max-width : 780px) {
+    .main_div2 {
+    width:100%;
+    margin-top:100px;
+    height:770px;
+    position:relative;
+    z-index:1;
+    margin-top:30px;
+    background-color:white;
+    -webkit-box-shadow:inset 0 2px 0 rgba(255,255,255,1);
+    .main_div2_left {
+    float:left;
+    width:49%;
+   
+    height:770px;
+    .concept_box {
+     width:100%;
+     height:105px;
+     padding-left:20px;
+     h4 {
+    font-weight:500 !important;
+     }
+    }
+    display:inline-block;
+    }
+    .main_div2_right {
+    float:left;
+    margin-left:1%;
+    width:48%;
+   
+    height:770px;
+    display:inline-block;
+        .top_pic {
+            width:100%;
+            height:250px;
+            img {
+                width:100%;
+                height:250px;
+            }
+        }
+         .mid_pic {
+           
+            width:100%;
+            margin-top:10px;
+            display:inline-block;
+            height:250px;
+            .mid_pic1 {
+            width:47%;
+            margin-right:1%;
+            height:250px;
+            display:inline-block;
+             img {
+                 width:100%;
+                 height:250px;
+             }
+            }
+            .mid_pic2 {
+            width:47%;
+            margin-left:1%;
+            height:250px;
+            display:inline-block;
+            img {
+                 width:100%;
+                 height:250px;
+             }
+            }
+        }
+        .bot_pic {
+           
+            width:100%;
+            margin-top:10px;
+            height:250px;
+            img {
+                 width:100%;
+                 height:250px;
+             }
+        }
+    }
+}
+.navbar-toggle {
+    background-color:black;
+}   
+}

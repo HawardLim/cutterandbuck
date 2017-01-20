@@ -17,10 +17,7 @@
 #navlileft {
     margin-left:-50px;
 }
-.lang {
-    position:relative;
-    float:right;
-}
+
 @media all and (min-width : 769px) and (max-width : 1150px) {
     #subjects1-search-txt {
      margin-top:8px;
