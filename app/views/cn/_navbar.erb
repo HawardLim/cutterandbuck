@@ -20,21 +20,21 @@
                 <div class="navbar_menu">
                     <ul class="nav navbar-nav">
                         <li id="navlileft">
-                            <a href="/home/company">COMPANY</a>
+                            <a href="/cn/company">公司</a>
                         </li>
                         <li id="navlicenter">
-                            <a href="/home/brand">BRAND</a>
+                            <a href="/cn/brand">品牌</a>
                         </li>
                         <li id="navlicenter">
-                            <a href="/posts">CATALOGUE</a>
+                            <a href="/posts">商品目录</a>
                         </li>
                         <li id="navlicenter">
-                            <a href="/home/store">STORE</a>
+                            <a href="/cn/store">卖场</a>
                         </li>
                         <% if user_signed_in? %>
                         <% if current_user.email == "admin@naver.com"%>
                         <li id="navlicenter">
-                            <a href="/home/admin">관리자페이지로 이동</a>
+                            <a href="/home/admin">관리자페이지</a>
                         </li>
                         <li id="navlicenter">
                             <%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
@@ -52,13 +52,13 @@
             <!--mobile nav-->
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav oneofnav">
-                    <li><a href="/home/company">COMPANY</a></li>
+                    <li><a href="/cn/company">公司</a></li>
                     <hr style="width:340px; padding:0px; margin:0px auto;">
-                    <li><a href="/home/brand">BRAND</a></li>
+                    <li><a href="/cn/brand">品牌</a></li>
                     <hr style="width:340px; padding:0px; margin:0px auto;">
-                    <li><a href="/posts">CATALOGUE</a></li>
+                    <li><a href="/posts">商品目录</a></li>
                     <hr style="width:340px; padding:0px; margin:0px auto;">
-                    <li><a href="/home/store">STORE</a></li>
+                    <li><a href="/cn/store">卖场</a></li>
                     <hr style="width:340px; padding:0px; margin:0px auto;">
                  </ul>
             </div>
