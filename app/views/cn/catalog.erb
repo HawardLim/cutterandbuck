@@ -1,27 +1,33 @@
   
 <div class="container">
     <div class="cata_title">
-        <h2>CATALOGUE<small> <%=@post.title%></small></h2>
+        <h2>CATALOGUE</h2>
     </div>
     <div class="catalogue_div">
+        <% if @post_last_attach.nil?%>
+        <% else %>
         <ul class="bxslider">
-          <% @post_attachments.each do |po| %>
+          <% @post_last_attachs.each do |po| %>
           <li><p style="vertical-align:center; text-align:center"><%=image_tag po.avatar.url%></p></li>
-          <% end %>
+       <% end %>
         </ul>
         <div id="bx-pager">
-          <% @post_attachments.each do |po| %>
+            <% @post_last_attachs.each do |po| %>
             <a data-slide-index="<%=po.id_of_pic%>" href=""><%=image_tag po.avatar.url%></a>
-          <% end %>
+            <% end %>
         </div>
-         <div class="pagination_div"><%= will_paginate @post_attachments, :previous_label => t("<<"), :next_label => t(">>")%></div>
+        <% end %>
+        <% if @post_last_attach.nil?%>
+        <% else %>
+        <div class="pagination_div"><%= will_paginate @post_last_attachs, :previous_label => t("<<"), :next_label => t(">>")%></div>
+        <% end %>
     </div>
     <div class="mainpage_title">
         <h2>ALL CATALOGUE</h2>
     </div>
     <div class="catalogue_all">
         <% @posts.each do |post| %>
-        <a href="/posts/<%=post.id%>">
+        <a href="/cn/catalog_detail/<%=post.id%>">
         <div class="book">
             <%= image_tag post.post_attachments.first.avatar.url %>
             <p><%= post.title %></p>

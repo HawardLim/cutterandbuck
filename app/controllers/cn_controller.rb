@@ -59,4 +59,28 @@ class CnController < ApplicationController
     @stores = Store.all
     render layout: "china"
   end
+  def catalog
+    @post_last = Post.last
+    if @post_last.nil? 
+      @posts = Post.all
+    else
+      @post_last_attach = @post_last.post_attachments.paginate(:page => params[:page], per_page: 6)
+      @post_last_attachs = @post_last_attach
+      @posts = Post.all
+    end
+     render layout: "china"
+  end
+
+  # GET /posts/1
+  # GET /posts/1.json
+  def catalog_detail
+     @posts = Post.all
+     @post =Post.find(params[:id])
+     @post_attachments = @post.post_attachments.paginate(:page => params[:page], per_page: 6)
+     @post_attachmentss = @post_attachments
+      render layout: "china"
+  end
+  def withcutterbuck
+    render layout: "china"
+  end
 end

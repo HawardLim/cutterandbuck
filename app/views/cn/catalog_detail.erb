@@ -21,7 +21,7 @@
     </div>
     <div class="catalogue_all">
         <% @posts.each do |post| %>
-        <a href="/posts/<%=post.id%>">
+        <a href="/cn/catalog_detail/<%=post.id%>">
         <div class="book">
             <%= image_tag post.post_attachments.first.avatar.url %>
             <p><%= post.title %></p>

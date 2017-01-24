@@ -67,8 +67,7 @@
       auto: true,
   autoControls: true
     });
-    
-    window.onload = function() {
+  $(document).ready(function() {
   var divs = document.getElementsByClassName('bx-wrapper');
   for (var i = 0; i < divs.length; ++i) {
     var div = divs[i];
@@ -90,7 +89,7 @@
       img.style.cssText = 'width: auto; height: 100%; margin-left: 0;';
     }
   }
-};
+});
 </script>
 
 
