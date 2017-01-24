@@ -13,8 +13,8 @@
     <div class="store_list">
         <% @store.each do |s| %>
         <div class="store_each">
-            <h5><%= s.name %></h5>
-            <p><%= s.address %></p>
+            <h5><%= s.name_c %></h5>
+            <p><%= s.address_c %></p>
             <p><%= s.phone %></p>
             <br>
             <a href="/home/store_detail/<%= s.id %>">상세사항</a>

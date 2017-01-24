@@ -15,7 +15,7 @@
               <% @news.each do |n| %>
               <tr class="table_con_row">
               <td class=""><%= n.id %></td>
-              <td><a href="/home/news_detail/<%=n.id%>"><%= n.title %></td>
+              <td><a href="/home/news_detail/<%=n.id%>"><%= n.title_c %></td>
               <td class=""><%= n.created_at.in_time_zone("Asia/Shanghai").strftime("%Y-%m-%d") %></td>
               <td><%= n.count %></td>
               </tr> 
