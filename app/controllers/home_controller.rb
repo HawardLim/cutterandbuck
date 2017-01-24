@@ -16,6 +16,7 @@ class HomeController < ApplicationController
      @qna.title = params[:inquire_title]
      @qna.content = params[:inquire_content]
      @qna.save
+     redirect_to "/home/index"
   end
   def store_upload
     @store = Store.new
@@ -33,8 +34,9 @@ class HomeController < ApplicationController
     @store.weekend = params[:weekend]
     @store.holiday = params[:holiday]
     @store.save
+     redirect_to "/home/index"
   end
-  def store_upload
+  def store_edit_com
     @store = Store.find(params[:id])
     @store.name = params[:name]
     @store.name_c = params[:name_c]
@@ -47,6 +49,7 @@ class HomeController < ApplicationController
     @store.weekend = params[:weekend]
     @store.holiday = params[:holiday]
     @store.save
+     redirect_to "/home/index"
   end
   def event_upload
     @event = Event.new
@@ -59,6 +62,7 @@ class HomeController < ApplicationController
     uploader.store!(file)
     @event.event_pic = uploader.url
     @event.save
+     redirect_to "/home/index"
   end
   def event_edit_com
     @event = Event.find(params[:id])
@@ -68,6 +72,7 @@ class HomeController < ApplicationController
     @event.content_c = params[:content_c]
     @event.event_pic = params[:pic]
     @event.save
+    redirect_to "/home/index"
   end
   def news_upload
     @event = New.new
