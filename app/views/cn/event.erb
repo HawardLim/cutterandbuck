@@ -15,7 +15,7 @@
               <% @event.each do |e| %> 
               <tr class="table_con_row">
               <td class=""><%= e.id %></td>
-              <td><a href="/home/news_detail/<%=e.id%>"><%= e.title_c %></td>
+              <td><a href="/cn/news_detail/<%=e.id%>"><%= e.title_c %></td>
               <td class=""><%= e.created_at.in_time_zone("Asia/Shanghai").strftime("%Y-%m-%d") %></td>
               <td><%= e.count %></td>
               </tr>
