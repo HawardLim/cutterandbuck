@@ -8,12 +8,12 @@
         <% else %>
         <ul class="bxslider">
           <% @post_last_attachs.each do |po| %>
-          <li><p style="vertical-align:center; text-align:center"><%=image_tag po.avatar.url%></p></li>
+          <li><p style="vertical-align:center; text-align:center"><%=image_tag po.avatar%></p></li>
        <% end %>
         </ul>
         <div id="bx-pager">
             <% @post_last_attachs.each do |po| %>
-            <a data-slide-index="<%=po.id_of_pic%>" href=""><%=image_tag po.avatar.url%></a>
+            <a data-slide-index="<%=po.id_of_pic%>" href=""><%=image_tag po.avatar%></a>
             <% end %>
         </div>
         <% end %>
@@ -29,7 +29,7 @@
         <% @posts.each do |post| %>
         <a href="/cn/catalog_detail/<%=post.id%>">
         <div class="book">
-            <%= image_tag post.post_attachments.first.avatar.url %>
+            <%= image_tag post.post_attachments.first.avatar%>
             <p><%= post.title %></p>
         </div>
         </a>
