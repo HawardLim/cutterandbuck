@@ -40,10 +40,14 @@ class PostsController < ApplicationController
 
      respond_to do |format|
        if @post.save
-         i = 0 
+         i = 0
          params[:post_attachments]['avatar'].each do |a|
-            @post_attachment = @post.post_attachments.create!(:avatar => a)
+            @post_attachment = @post.post_attachments.create
             @pic_count = @post.post_attachments.count
+            file = a
+            uploader = CutterUploader.new
+            uploader.store!(file)
+            @post_attachment.avatar = uploader.url
             #while ( i < @pic_count + 1 )
             @post_attachment.id_of_pic = i
             i+= 1
