@@ -4,6 +4,7 @@
     </div>
     <div class="inquire_div">
       <form action= "/home/qna_upload" method= "POST"  enctype="multipart/form-data" accept-charset="UTF-8" style="position:relative;">
+           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <div class="inquire_name">
             <input type="text" placeholder="이름을 입력해주세요" style="padding-left:10px;" class="inquire_name" name="inquire_name">
         </div>
