@@ -10,7 +10,7 @@
         <p>조회수 : <%= @event.count %></p>
     </div>
     <div class="detail_content">
-        <img class="detail_pic" src="/assets/1.jpg">
+        <%= image_tag @news.news_pic %>
         <div class="detail_p">
             <p><%= @event.content %></p>
         </div>
