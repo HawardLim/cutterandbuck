@@ -2,7 +2,7 @@
  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="position:fixed;border-bottom:1px solid #c0c0c0;">
         <div class="container">
             <div class="navbar_logo" id="oou_logo_nav">
-                <a href="/home/index"><img style="width:60px; margin-top:-5px;"src="http://www.cutterbuck.com/skin/frontend/enterprise/cutterbuck/images/logo.png"></a>
+                <a href="/home/index" onclick="goReload('/home/index')"><img style="width:60px; margin-top:-5px;"src="http://www.cutterbuck.com/skin/frontend/enterprise/cutterbuck/images/logo.png"></a>
             </div>
 
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -70,7 +70,8 @@
         
     </nav>
 
-</div><script>
+</div>
+<script>
      $(function () {
         var isAdded = false;
         $(window).resize(function () {

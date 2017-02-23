@@ -1,16 +1,15 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@font-face {
-font-family: 'gotham';
-font-style: normal;
-src: url('/assets/Gotham-Black(1).ttf');
-src: url('/assets/Gotham-Bold(1).ttf');
-}
-// 메인페이지
+@font-face { font-family: 'Noto Sans Korean100'; font-style: normal; font-weight: 100; src: local('Noto Sans Thin'), local('NotoSans-Thin'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Thin-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Thin-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Thin-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Thin-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 300; src: local('Noto Sans Light'), local('NotoSans-Light'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Light-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Light-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Light-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Light-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 350; src: local('Noto Sans DemiLight'), local('NotoSans-DemiLight'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-DemiLight-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-DemiLight-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-DemiLight-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-DemiLight-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 400; src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Regular-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Regular-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Regular-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 500; src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Medium-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Medium-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 700; src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Bold-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Bold-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Bold-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Bold-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 900; src: local('Noto Sans Black'), local('NotoSans-Black'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Black-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Black-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Black-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Black-Hestia.otf) format('opentype'); }
+@font-face { font-family: 'Noto Sans Korean200'; font-style: normal; font-weight: 300; src: local('Noto Sans Light'), local('NotoSans-Light'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Light-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Light-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Light-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Light-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 350; src: local('Noto Sans DemiLight'), local('NotoSans-DemiLight'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-DemiLight-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-DemiLight-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-DemiLight-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-DemiLight-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 400; src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Regular-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Regular-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Regular-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 500; src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Medium-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Medium-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 700; src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Bold-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Bold-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Bold-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Bold-Hestia.otf) format('opentype'); } @font-face { font-family: 'Noto Sans Korean'; font-style: normal; font-weight: 900; src: local('Noto Sans Black'), local('NotoSans-Black'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Black-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Black-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Black-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Black-Hestia.otf) format('opentype'); }
+@font-face { font-family: 'Noto Sans Korean300'; font-style: normal; font-weight: 400; src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Regular-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Regular-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Regular-Hestia.otf) format('opentype'); }
+@font-face { font-family: 'Noto Sans Korean400'; font-style: normal; font-weight: 500; src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Medium-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Medium-Hestia.otf) format('opentype'); } 
+@font-face { font-family: 'Noto Sans Korean700'; font-style: normal; font-weight: 700; src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Bold-Hestia.eot), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Bold-Hestia.eot?#iefix) format('embedded-opentype'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Bold-Hestia.woff) format('woff'), url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Bold-Hestia.otf) format('opentype'); }
+
 body {
     background-color:white;
-    font-family:'gotham';
+    font-family:'Noto Sans Korean400';
 }
 .sub_menu {
     width:100%;
@@ -68,7 +67,7 @@ body {
     height:770px;
     position:relative;
     z-index:1;
-    margin-top:30px;
+    margin-top:100px;
     background-color:white;
     -webkit-box-shadow:inset 0 2px 0 rgba(255,255,255,1);
     .main_div2_left {
@@ -333,18 +332,18 @@ body {
 // 스토어 시작
     .store_big_pic {
         width:100%;
-        height:700px;
+        height:100vh;
         position:relative;
         img {
             width:100%;
-            height:700px;
+            height:100vh;
         }
         .store_big_pic_p {
-              margin-top:-700px;
+              margin-top:-100vh;
               text-align:center;
               position:relative;
               width:100%;
-              height:700px;
+              height:100vh;
               background-color:rgba(0,0,0,0.3);
             h4 {
                 color:white;
@@ -621,13 +620,20 @@ body {
        padding-bottom:20px;
     }
     
-    
-    .video {
+    .video_div {
+    display:inline-block;
     width:100%;
     height:100vh;
+    margin-top:80px;
+    position:relative;
+    .video {
+    width:50%;
+    margin-left:24%;
+    margin-right:24%;
+    height:auto;
     margin-top:50px;
     }
-    
+    }
     .detail_title {
     width:80%;
     margin-left:auto;
